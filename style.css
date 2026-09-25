@@ -1,12 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import './slides.css';
+
 :root{
   --main-background: #1D2220;
+  --card-background: #3E4844;
   --slider-buttons-background: #3f3f3f; 
+  --button-background: #252525;
 
   --primary-color: #52CC9B; 
   --primary-border: #88FFCF;
   --primary-shadowbox: #1bdd90; 
 
-  --secundary-text: #B9E9D8;
+  --primary-text: #B9E9D8;
+  --secundary-text: #f8f8f8;
+
+  --realce: #CC5256;
+  --promo-card-prices: #FFE865;
 }
 
 .shadow-box{
@@ -14,9 +23,15 @@
 }
 
 *{
- margin: 0;
- padding: 0;
- box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+
+  font-family: "Roboto", sans-serif;
+}
+
+main{
+  min-width: none;
 }
 
 body{
@@ -42,6 +57,9 @@ nav{
   padding: 10px;
   margin: 20px 60px;
 }
+.logo-mobile{
+  display: none;
+}
 .arrow{
   font-size: 20px;
 }
@@ -53,6 +71,7 @@ nav{
   border: 1px solid var(--primary-border);
 
   display: flex;
+  align-items: center;
 }
 
 .search-components button{
@@ -79,9 +98,13 @@ nav{
   outline: none;
 }
 
+.search-bar-mobile{
+  display: none;
+}
+
 .search-components:has(.search-box:focus){
   outline:var(--primary-color) ;
-  box-shadow: 0 2px 0px 0px var(--secundary-text);
+  box-shadow: 0 2px 0px 0px var(--primary-text);
 }
 
 .login-button{
@@ -101,13 +124,14 @@ nav{
 /* Plano de fundo em degrade na frente do banner */
 .degrade-bg{
   background: linear-gradient(to top, #1D2220, #282F2C, #363f3b, #454545da, #4545450a);
+  margin-bottom: 40px;
 
   width: 100%;
   height: 80px;
 
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   gap: 46px;
 }
 
@@ -121,14 +145,403 @@ nav{
   border-radius: 8px;
   cursor: pointer;
 
-  transition:box-shadow .4s ease-in-out;
+  transition:box-shadow .1s ease-in-out;
 }
 .button.active {
-  background-color: #ff4757;
-  /* New background color */
+  background-color: var(--realce);
   border-color: var(--primary-color);
-  /* New border color */
 }
 .button:hover{
-  box-shadow: 0 1px 0 1px var(--primary-shadowbox);
+  box-shadow: 0 2px 0 1px var(--primary-shadowbox);
+}
+
+h1{
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+
+  color: var(--primary-text);
+  letter-spacing: 1.15px;
+}
+
+
+.avisos{
+  max-width: 1000px;
+  margin: 0 auto 64px;
+  background: var(--card-background);
+
+  border: 1px solid var(--primary-border) ;
+  border-radius: 32px;
+}
+
+.avisos-card-holder{
+  padding: 20px 36px;
+  display: flex;
+  list-style: none;
+
+  color: #fff;
+
+
+  justify-content: space-between;
+  align-content: center;
+}
+
+.avisos-card{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.avisos-card img{
+  width: 60px;
+  height: 52px;
+}
+
+/* Promos da semana */
+.card-section{
+  max-width: 1000px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+  grid-auto-rows: auto;
+
+  gap: 12px 18.33px;
+
+  margin-bottom: 64px;
+}
+
+.card-section-titulo h2 {
+  color: var(--primary-color);
+  letter-spacing: 1.15px;
+
+  margin-bottom: 4px;
+
+  font-size: 38px;
+
+}
+
+.card-section h2 ~ p{
+  color: #fff;
+
+  max-width: 80ch;
+}
+
+
+.card-section-titulo{
+  grid-column: 1 / -1;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 16px;
+}
+
+.card-section-titulo a{
+  text-decoration: none;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-border);
+  border-radius: 4px;
+  padding: 12px 20px;
+
+  transition: background-color .1s ease-in-out;
+}
+.card-section-titulo a:hover{
+  background: var(--primary-color);
+  color: #000;
+}
+
+.game-card{
+
+  max-width: 315px;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 6px;
+
+}
+
+.card-holder{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+
+  background-color: var(--card-background);
+  border-radius: 8px;
+  color: var(--primary-text);
+
+  margin-bottom: 2px;
+
+  text-decoration: none;
+}
+
+.card-holder h3{
+  margin-bottom: 24px;
+}
+
+.card-info{
+  padding: 18px;
+}
+
+.card-info .promo{
+  display: grid;
+  grid-template-columns: 68px 2fr;
+  gap: 0 12px;
+}
+
+.card-holder .preco h4{
+  color: var(--secundary-text);
+}
+
+.card-holder span{
+  grid-row: span 2;
+
+
+  padding: 10px 8px;
+  background: var(--realce);
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+
+  text-align: center;
+}
+
+.card-holder p{
+  text-decoration: line-through;
+}
+
+.card-holder h4{
+  color: var(--promo-card-prices);
+  font-size: 24px;
+}
+
+
+.game-card button{
+  background: var(--button-background);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px;
+
+  border-radius: 0 0 8px 8px;
+
+  outline: 0;
+  border: 1px solid var(--primary-border);
+
+  cursor: pointer;
+}
+
+.game-card button span{
+  color: var(--primary-color);
+  letter-spacing: 1.15px;
+}
+
+@media (max-width: 1100px){
+  .search-components {
+      width: 480px;
+    }
+  
+    .search-components button {
+      width: 80px;
+      height: 47px;
+    }
+  
+    .search-box {
+      width: 380px;
+    }
+}
+@media (max-width: 1000px){
+  .search-components {
+      width: 280px;
+      align-content: center;
+    }
+    
+    .search-components button {
+      display: none;
+    }
+    
+    .search-box {
+      width: 380px;
+      height: 44px;
+      border-radius: 8px;
+    }
+
+    .search-components .login-button{
+      height: 44px;
+      padding: 0;
+    }
+
+  h1{
+    max-width: 680px;
+    font-size: 26px;
+  }
+  .avisos{
+    max-width: 680px;
+  }    
+
+  .card-section{
+    max-width: 680px;
+    justify-items: center;
+  }
+
+  .card-section-desc h2{
+    font-size: 24px;
+  }
+  .card-section-desc h2 ~ p{
+    max-width: 48ch;
+  }
+
+  .card-section .card-section-titulo{
+    justify-self: stretch;
+  }
+
+  .card-section.slide-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .carousel{
+    max-width: 680px;
+  }
+  
+  .slide{
+    flex-direction: column;
+    align-items: center;
+
+    gap: 0;
+    margin-right: 0;
+  }
+  
+  .slides-images{
+    width: 720px;
+    margin-right: 0;
+  }
+
+  .carousel-button{
+    display: none;
+  }
+}
+
+@media (max-width: 720px){
+  body{
+    background-size: 800px;
+  }
+
+  header{
+    margin-bottom: 100px;
+  }
+  
+  main{
+    padding: 0 10px;
+  }
+
+  nav{
+    display: grid;
+    grid-template-columns: 8fr 1fr 1fr;
+    justify-content: space-between;
+
+    padding: 20px;
+    margin: 0;
+  }
+
+  .logo-mobile{
+    display: block;
+    background: #00000041;
+    border-radius: 4px;
+    padding: 4px;
+  }
+  .logo-descktop{
+    display: none;
+  }
+
+  .card-holder,.card-holder a, .card-holder img, .plataforma img{
+    width: 170px;
+  }
+  .card-holder h3{
+    display: none;
+  }
+
+  .promo span{
+    font-size: 14px;
+  }
+  .promo p{
+    font-size: 8px;
+  }
+  .promo h4{
+    font-size: 16px;
+  }
+
+
+  .search-components{
+    width: auto;
+    border: 0;
+    background: none;
+    box-shadow: 0 0 0 0;
+  }
+
+  .search-bar-mobile{
+    margin-right: 10px;
+    display: block;
+  }
+  .search-bar-mobile img{
+    height: 44px;
+    background: var(--primary-color);
+    border-radius: 10px;
+    border: 0 0 6.5px 2px var(--primary-shadowbox);
+  }
+
+  .search-box{
+    display: none;
+  }
+}
+
+@media (max-width: 425px){
+
+  .login-button{
+    padding: 14px 26px;
+
+    font-size: 12px;
+  }
+
+  .avisos{
+    display: none;
+  }
+
+  .card-section{
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .card-info .promo {
+    grid-template-columns: 1fr 9fr;
+  }
+
+  .carousel {
+    max-width: 300px;
+  }
+  .slide{
+    max-width: 320px;
+  }
+  .slide-images{
+    width: 320px;
+    grid-template-rows: 200px 72px;
+    
+  }
+  .slide-images-banner{
+    width: 320px;
+  }
+
+  .slide-images-galery{
+    width: 320px;
+    gap: 10px;
+
+    overflow-x: scroll;
+  }
+  
+  
 }

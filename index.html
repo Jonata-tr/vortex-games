@@ -1,33 +1,392 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="PT-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vortex Games</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <img src="./img/logo-desktop.svg" alt="">
+      <nav>
+        <div class="logos">
+          <img src="./img/logo-desktop.svg" alt="" class="logo-descktop"/>
+          <img src="./img/logo-mobile.svg" alt="" class="logo-mobile"/>
+        </div>
 
-            <div class="search-components shadow-box">
-                <button>Filtrar por <span class="arrow">&#9662;</span></button>
-                <input type="text" placeholder="Pesquise por palavras chaves ou nomes" class="search-box">
-            </div>
-        
-            <a href="#" class="login-button shadow-box">Entrar</a>
-        </nav>
+        <div class="search-components shadow-box">
+          <button>Filtrar por <span class="arrow">&#9662;</span></button>
+          <input
+            type="text"
+            placeholder="Pesquise por palavras chaves ou nomes"
+            class="search-box"
+          />
+
+          <div class="search-bar-mobile">
+            <img src="./img/icons/search-mobile.svg" alt="loopar da função de pesquisa">
+          </div>
+        </div>
+
+        <a href="#" class="login-button shadow-box">Entrar</a>
+      </nav>
     </header>
 
-
     <div class="degrade-bg">
-        <button class="button active shadow-box" value="firstBanner"></button>
-        <button class="button shadow-box" value="secondBanner"></button>
-        <button class="button shadow-box" value="thirdBanner"></button>
+      <button class="button active shadow-box" value="firstBanner"></button>
+      <button class="button shadow-box" value="secondBanner"></button>
+      <button class="button shadow-box" value="thirdBanner"></button>
     </div>
-</body>
 
-<script src="main.js"></script>
+    <main>
+      <h1>Descubra o nosso incrivel catalogo de jogos:</h1>
+      <section class="avisos shadow-box">
+        <ul class="avisos-card-holder">
+          <li class="avisos-card">
+            <img
+              src="./img/icons/controle.svg"
+              alt="controle de video game vermelho em um fundo redondo"
+            />
+            <p>+1000 vendas no mundo todo</p>
+          </li>
+
+          <li class="avisos-card">
+            <img src="./img/icons/promo.svg" alt="icone de aviso de promoção" />
+            <p>Cupons e desconto toda semana</p>
+          </li>
+
+          <li class="avisos-card">
+            <img
+              src="./img/icons/nota.svg"
+              alt="lista de estrelas marcando a nota alta do site"
+            />
+            <p>Nota 10 no Reclame aqui!</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Promoções da semana -->
+      <section class="card-section">
+        <div class="card-section-titulo">
+          <div class="card-section-desc">
+            <h2>Promoções da Semana</h2>
+            <p>
+              Toda semana, uma promoção nova para encher a sua biblioteca e seu
+              coração de experiências únicas e inesquecíveis.
+            </p>
+          </div>
+
+          <a href="#">Ver mais promoções</a>
+        </div>
+
+        <article class="game-card">
+          <a href="#" class="card-holder">
+            <img src="./img/god.png" alt="" />
+            <div class="plataforma">
+              <img src="./img/steam.svg" alt="" />
+            </div>
+
+            <div class="card-info">
+              <h3>God of War (2018)</h3>
+
+              <div class="promo">
+                <span>-30%</span>
+                <p>R$ 249,90</p>
+                <h4>R$ 174,93</h4>
+              </div>
+            </div>
+          </a>
+
+          <button>
+            <img src="./img/icons/carrinho.svg" alt="carrinho de compras" />
+            <span>COMPRAR</span>
+          </button>
+        </article>
+
+        <article class="game-card">
+          <a href="#" class="card-holder">
+            <img src="./img/SPIDER.png" alt="" />
+            <div class="plataforma">
+              <img src="./img/playstation.svg" alt="" />
+            </div>
+
+            <div class="card-info">
+              <h3>Marvel's Spider-Man</h3>
+
+              <div class="promo">
+                <span>-15%</span>
+                <p>R$ 299,90</p>
+                <h4>R$ 254,90</h4>
+              </div>
+            </div>
+          </a>
+
+          <button>
+            <img src="./img/icons/carrinho.svg" alt="carrinho de compras" />
+            <span>COMPRAR</span>
+          </button>
+        </article>
+
+        <article class="game-card">
+          <a href="#" class="card-holder">
+            <img src="./img/GEARS.png" alt="" />
+            <div class="plataforma">
+              <img src="./img/xbox.svg" alt="" />
+            </div>
+
+            <div class="card-info">
+              <h3>God of War (2018)</h3>
+
+              <div class="promo">
+                <span>-50%</span>
+                <p>R$ 249,90</p>
+                <h4>R$ 174,93</h4>
+              </div>
+            </div>
+          </a>
+
+          <button>
+            <img src="./img/icons/carrinho.svg" alt="carrinho de compras" />
+            <span>COMPRAR</span>
+          </button>
+        </article>
+
+        <article class="game-card">
+          <a href="#" class="card-holder">
+            <img src="./img/ffXV.png" alt="" />
+            <div class="plataforma">
+              <img src="./img/steam.svg" alt="" />
+            </div>
+
+            <div class="card-info">
+              <h3>Final Fantasy XV</h3>
+
+              <div class="promo">
+                <span>-30%</span>
+                <p>R$ 249,90</p>
+                <h4>R$ 174,93</h4>
+              </div>
+            </div>
+          </a>
+
+          <button>
+            <img src="./img/icons/carrinho.svg" alt="carrinho de compras" />
+            <span>COMPRAR</span>
+          </button>
+        </article>
+
+        <article class="game-card">
+          <a href="#" class="card-holder">
+            <img src="./img/red1.png" alt="" />
+            <div class="plataforma">
+              <img src="./img/steam.svg" alt="" />
+            </div>
+
+            <div class="card-info">
+              <h3>Red Dead Redemption 2</h3>
+
+              <div class="promo">
+                <span>-74%</span>
+                <p>R$ 299,90</p>
+                <h4>R$ 77,98</h4>
+              </div>
+            </div>
+          </a>
+
+          <button>
+            <img src="./img/icons/carrinho.svg" alt="carrinho de compras" />
+            <span>COMPRAR</span>
+          </button>
+        </article>
+
+        <article class="game-card">
+          <a href="#" class="card-holder">
+            <img src="./img/forza.png" alt="" />
+            <div class="plataforma">
+              <img src="./img/xbox.svg" alt="" />
+            </div>
+
+            <div class="card-info">
+              <h3>Forza Horizon 6</h3>
+
+              <div class="promo">
+                <span>-40%</span>
+                <p>R$ 299,90</p>
+                <h4>R$ 179,40</h4>
+              </div>
+            </div>
+          </a>
+
+          <button>
+            <img src="./img/icons/carrinho.svg" alt="carrinho de compras" />
+            <span>COMPRAR</span>
+          </button>
+        </article>
+      </section>
+
+      <!-- Recomendações do dia -->
+      <section class="card-section">
+        <div class="card-section-titulo">
+          <div class="card-section-desc">
+            <h2>Recomendações do dia</h2>
+            <p>
+              Aventuras incriveis para jogar comendo pipoca e pulando do sofa.
+            </p>
+          </div>
+
+          <a href="#">Ver mais promoções</a>
+        </div>
+
+        <article class="game-card">
+          <a href="#" class="card-holder">
+            <img src="./img/wolverine.png" alt="" />
+            <div class="plataforma">
+              <img src="./img/playstation.svg" alt="" />
+            </div>
+
+            <div class="card-info">
+              <h3>Marvel's Wolverine</h3>
+
+              <div class="preco">
+                <h4>R$ 299,99 BRL</h4>
+              </div>
+            </div>
+          </a>
+
+          <button>
+            <img src="./img/icons/carrinho.svg" alt="carrinho de compras" />
+            <span>COMPRAR</span>
+          </button>
+        </article>
+
+        <article class="game-card">
+          <a href="#" class="card-holder">
+            <img src="./img/yotei.png" alt="" />
+            <div class="plataforma">
+              <img src="./img/playstation.svg" alt="" />
+            </div>
+
+            <div class="card-info">
+              <h3>Ghost of Yotei</h3>
+
+              <div class="preco">
+                <h4>R$ 399,99 BRL</h4>
+              </div>
+            </div>
+          </a>
+
+          <button>
+            <img src="./img/icons/carrinho.svg" alt="carrinho de compras" />
+            <span>COMPRAR</span>
+          </button>
+        </article>
+
+        <article class="game-card">
+          <a href="#" class="card-holder">
+            <img src="./img/sunset.png" alt="" />
+            <div class="plataforma">
+              <img src="./img/steam.svg" alt="" />
+            </div>
+
+            <div class="card-info">
+              <h3>Sunset Overdrive</h3>
+
+              <div class="preco">
+                <h4>R$ 99,00 BRL</h4>
+              </div>
+            </div>
+          </a>
+
+          <button>
+            <img src="./img/icons/carrinho.svg" alt="carrinho de compras" />
+            <span>COMPRAR</span>
+          </button>
+        </article>
+      </section>
+      
+      <!-- Slide de jogos do dia -->
+      <section class="card-section slide-section">
+        <div class="card-section-titulo">
+          <div class="card-section-desc">
+            <h2>Descubra jogos para passar dias jogando</h2>
+            <p>
+              Aquele jogo que vai passar os proximos meses com você
+            </p>
+          </div>
+        </div>
+
+        <div class="carousel" data-carousel>
+
+          <ul data-slides>
+            <li class="slide" data-active>
+              <div class="slide-images steam">
+                <div class="slide-images-banner">
+                  <!-- <img src="img/miniaturas/stardew-valley/banner/stardew-slide-1.jpg" alt=""> -->
+                </div>
+
+                <div class="slide-images-galery">
+                    <div class="image-galery active">
+                      <img src="img/miniaturas/stardew-valley/stardew1.jpg" alt="">
+                    </div>
+                    <div class="image-galery">
+                      <img src="img/miniaturas/stardew-valley/stardew2.jpg" alt="">
+                    </div>
+                    <div class="image-galery">
+                      <img src="img/miniaturas/stardew-valley/stardew3.jpg" alt="">
+                    </div>
+                    <div class="image-galery">
+                      <img src="img/miniaturas/stardew-valley/stardew4.jpg" alt="">
+                    </div>
+                    <div class="image-galery">
+                      <img src="img/miniaturas/stardew-valley/stardew5.jpg" alt="">
+                    </div>
+                    <div class="image-galery">
+                      <img src="img/miniaturas/stardew-valley/stardew6.jpg" alt="">
+                    </div>
+                </div>
+              </div>
+
+              <div class="slide-info">
+                <div class="slide-game-plataform">
+                  <img src="./img/steam.svg" alt="logo da empresa steam">
+                </div>
+                
+                <div class="card-info">
+                  <h3>Stardew Valey</h3>
+                  <p>Você herdou a antiga propriedade agrícola do seu avô em Stardew Valley. De seu sangue e suor e faça ela voltar a vida.</p>
+
+                  <ul>
+                    <li>
+                      <img src="./img/icons/mini-controle.svg" alt="image de um controle">
+                      <p>De 1 ate 8 jogadores</p>
+                    </li>
+                    <li>
+                      <img src="./img/icons/mini-hd.svg" alt="image de um disco de armazenamento">
+                      <p>500gb de espaço necessario</p>
+                    </li>
+                    <li>
+                      <img src="./img/icons/mini-relogio.svg" alt="image de um relogio">
+                      <p>Entre 55h a 100h de conteudo </p>
+                    </li>
+                  </ul>
+                  <div class="preco">
+                    <h4>R$ 299,99 BRL</h4>
+                  </div>
+                </div>
+              </div>
+            </li>
+            
+            
+          </ul>
+          
+          <button class="carousel-button prev" data-carousel-button="prev">&#8656</button>
+          <button class="carousel-button next" data-carousel-button="next">&#8658</button>
+        </div>
+      </section>
+    </main>
+  </body>
+
+
+
+  <script src="main.js"></script>
+  <script src="./carousel.js"></script>
 </html>
