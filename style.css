@@ -35,6 +35,8 @@ main{
 }
 
 body{
+  min-height: 100%;
+
   background-color: var(--main-background);
   background-image: url("/img/banners/horizon-banner.png");
   background-size: 1920px 580px;
@@ -47,12 +49,16 @@ body{
 
 header{
   margin-bottom: 420px;
+
+  position: sticky;
+  top: 0;
 }
 
 nav{
   max-width: 100%;
   display: flex;
   justify-content:space-between;
+  align-items: center;
 
   padding: 10px;
   margin: 20px 60px;
@@ -270,7 +276,7 @@ h1{
   grid-template-rows: auto;
 
   background-color: var(--card-background);
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0; 
   color: var(--primary-text);
 
   margin-bottom: 2px;
@@ -343,6 +349,124 @@ h1{
   letter-spacing: 1.15px;
 }
 
+.card-section.mais-vendidos{
+  grid-template-columns: 1fr 1fr;
+  align-content: stretch;
+}
+
+.mais-vendidos .game-card .card-holder{
+  padding: 16px;
+
+  border-radius: 8px;
+}
+
+.mais-vendidos .game-card{
+  max-width: 100%;
+
+  position: relative;
+}
+
+.mais-vendidos .game-card .plataforma{
+  display: flex;
+  flex-direction: column;
+  
+  position: relative;
+}
+.mais-vendidos .plataforma img{
+  width: 140px;
+  border-radius: 0 0 2px 2px;
+}
+
+.mais-vendidos .plataforma img:not(:last-child){
+  border-radius: 2px 2px 0 0;
+  position: absolute;
+  z-index: 2;
+}
+
+.mais-vendidos .card-holder{
+  grid-template-columns: 1fr 9fr;
+  gap: 16px;
+
+  align-items: center ;
+
+  border: 1px solid var(--primary-border);
+}
+
+.mais-vendidos .game-card::before{
+  content: var(--posicao, "");
+  width: 20px;
+  height: 20px;
+  background: var(--primary-color);
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 2px;
+
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.mais-vendidos .card-info{
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-content: space-between;
+}
+
+.mais-vendidos .card-info h3{
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.mais-vendidos .preco h4{
+  font-size: 16px;
+}
+
+.mais-vendidos .preco{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.mais-vendidos .promo{
+  grid-template-columns: 1fr 9fr;
+  grid-template-rows: 1fr;
+  align-items: end;
+}
+.mais-vendidos .promo span{
+  font-size: 12px;
+}
+
+.mais-vendidos .preco button{
+  height: fit-content;
+  padding: 10px 26px;
+
+  background: var(--primary-color);
+  border-radius: 4px;
+
+}
+.mais-vendidos .preco button img{
+  color: #000;
+}
+.mais-vendidos .preco button span{
+  background-color: transparent;
+  font-size: 14px;
+  
+  padding: 0;
+  color: #000;
+}
+
+footer{
+  width: 100%;
+  padding: 120px 10px;
+
+  background-color: #000;
+  text-align: center;
+  color: #fff;
+}
 @media (max-width: 1100px){
   .search-components {
       width: 480px;
@@ -423,8 +547,61 @@ h1{
     margin-right: 0;
   }
 
+  .slide-images{
+    border-radius: 0 0 0 0;
+  }
+
   .carousel-button{
-    display: none;
+    transform: translateY(210%);
+  }
+  .slide-info{
+    max-width: 672px;
+    width: 100%;
+
+    border-top: 0;
+  }
+}
+
+@media(max-width: 768px){
+  .slide{
+    height: 866px;
+  }
+
+  /* AJUSTA O TAMANHO DO BODY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+  .card-section.slide-section{
+    grid-template-rows: 1fr  866px;
+  
+    height: 100%;
+  }
+  
+  .carousel, .carousel ul{
+    max-width: 680px;
+    height: 100%;
+  }
+
+
+  .carousel-button{
+    transform: translateY(0%);
+  }
+  .carousel-button.next{
+    width: fit-content;
+    right: 0;
+  }
+  .carousel-button.prev{
+    left: 0;
+  }
+
+  .slide-info > .card-info{
+    padding: 24px;
+    height: 320px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .slide-info .preco p{
+    margin-bottom: 10px;
   }
 }
 
@@ -460,24 +637,6 @@ h1{
     display: none;
   }
 
-  .card-holder,.card-holder a, .card-holder img, .plataforma img{
-    width: 170px;
-  }
-  .card-holder h3{
-    display: none;
-  }
-
-  .promo span{
-    font-size: 14px;
-  }
-  .promo p{
-    font-size: 8px;
-  }
-  .promo h4{
-    font-size: 16px;
-  }
-
-
   .search-components{
     width: auto;
     border: 0;
@@ -499,6 +658,24 @@ h1{
   .search-box{
     display: none;
   }
+
+  .card-holder,.card-holder a, .card-holder img, .plataforma img{
+    width: 170px;
+  }
+  .card-holder h3{
+    display: none;
+  }
+
+  .promo span{
+    font-size: 14px;
+  }
+  .promo p{
+    font-size: 8px;
+  }
+  .promo h4, .preco h4{
+    font-size: 16px;
+  }
+
 }
 
 @media (max-width: 425px){
@@ -515,33 +692,84 @@ h1{
 
   .card-section{
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
   }
+
+  .card-section-titulo{
+    justify-content: space-between;
+    gap: 0px;
+  }
+
+  .card-section .card-section-titulo h2{
+    font-size: 20px;
+  }
+
+  .card-section .card-section-titulo p{
+    font-size: 12px;
+    max-width: 32ch;
+  }
+
+  .card-section-titulo a{
+    padding: 12px 24px;
+    font-size: 12px;
+
+    text-align: center;
+  }
+
+  .game-card{
+    justify-items:center;
+    gap: 2px;
+  }
+  .game-card button{
+    width: 170px;
+  }
+
 
   .card-info .promo {
     grid-template-columns: 1fr 9fr;
   }
 
-  .carousel {
+  .card-section.slide-section {
+    grid-template-rows: 1fr 866px !important;
+
+    max-width: 300PX;
+    height: 100%;
+  }
+
+  .carousel, .carousel ul{
     max-width: 300px;
   }
+
   .slide{
-    max-width: 320px;
+    max-width: 300px;
   }
   .slide-images{
-    width: 320px;
-    grid-template-rows: 200px 72px;
-    
+    width: 300px;
+    height: fit-content;
+    grid-template-rows: 200px auto;
+
   }
   .slide-images-banner{
-    width: 320px;
+    width: 300px;
+
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .slide-images-galery{
-    width: 320px;
+    width: 300px;
+    height: fit-content;
     gap: 10px;
 
     overflow-x: scroll;
   }
+
+  .slide-images-galery img{
+    height: auto;
+  }
   
+  .card-section.slide-section{
+    grid-template-rows: 1fr  634px;
+  }
   
 }

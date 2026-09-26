@@ -18,3 +18,6 @@ buttons.forEach(button => {
 
     })
 })
+
+
+const image_gallery = document.querySelector(".slide-images-galery");

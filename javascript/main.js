@@ -60,3 +60,10 @@ function resetBannerTimer() {
 }
 
 resetBannerTimer();
+
+
+const topContagem = document.querySelectorAll(".game-card[data-top-position]")
+
+topContagem.forEach((card, i) =>{
+    card.style.setProperty("--posicao", `"${i}"`);
+})

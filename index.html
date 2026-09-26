@@ -31,6 +31,8 @@
       </nav>
     </header>
 
+    <div class="banner"></div>
+
     <div class="degrade-bg">
       <button class="button active shadow-box" value="firstBanner"></button>
       <button class="button shadow-box" value="secondBanner"></button>
@@ -80,9 +82,9 @@
 
         <article class="game-card">
           <a href="#" class="card-holder">
-            <img src="./img/god.png" alt="" />
+            <img src="./img/game-card-imgs/god.png" alt="" />
             <div class="plataforma">
-              <img src="./img/steam.svg" alt="" />
+              <img src="./img/steam.svg" alt="plataforma steam" />
             </div>
 
             <div class="card-info">
@@ -102,9 +104,9 @@
           </button>
         </article>
 
-        <article class="game-card">
+        <article class="game-card" data-top-position>
           <a href="#" class="card-holder">
-            <img src="./img/SPIDER.png" alt="" />
+            <img src="./img/game-card-imgs/SPIDER.png" alt="" />
             <div class="plataforma">
               <img src="./img/playstation.svg" alt="" />
             </div>
@@ -128,7 +130,7 @@
 
         <article class="game-card">
           <a href="#" class="card-holder">
-            <img src="./img/GEARS.png" alt="" />
+            <img src="./img/game-card-imgs/GEARS.png" alt="" />
             <div class="plataforma">
               <img src="./img/xbox.svg" alt="" />
             </div>
@@ -152,9 +154,9 @@
 
         <article class="game-card">
           <a href="#" class="card-holder">
-            <img src="./img/ffXV.png" alt="" />
+            <img src="./img/game-card-imgs/ffXV.png" alt="" />
             <div class="plataforma">
-              <img src="./img/steam.svg" alt="" />
+              <img src="./img/steam.svg" alt="plataforma steam" />
             </div>
 
             <div class="card-info">
@@ -176,9 +178,9 @@
 
         <article class="game-card">
           <a href="#" class="card-holder">
-            <img src="./img/red1.png" alt="" />
+            <img src="./img/game-card-imgs/red1.png" alt="" />
             <div class="plataforma">
-              <img src="./img/steam.svg" alt="" />
+              <img src="./img/steam.svg" alt="plataforma steam" />
             </div>
 
             <div class="card-info">
@@ -200,7 +202,7 @@
 
         <article class="game-card">
           <a href="#" class="card-holder">
-            <img src="./img/forza.png" alt="" />
+            <img src="./img/game-card-imgs/forza.png" alt="" />
             <div class="plataforma">
               <img src="./img/xbox.svg" alt="" />
             </div>
@@ -233,12 +235,12 @@
             </p>
           </div>
 
-          <a href="#">Ver mais promoções</a>
+          <a href="#">Ver mais</a>
         </div>
 
         <article class="game-card">
           <a href="#" class="card-holder">
-            <img src="./img/wolverine.png" alt="" />
+            <img src="./img/game-card-imgs/wolverine.png" alt="" />
             <div class="plataforma">
               <img src="./img/playstation.svg" alt="" />
             </div>
@@ -260,7 +262,7 @@
 
         <article class="game-card">
           <a href="#" class="card-holder">
-            <img src="./img/yotei.png" alt="" />
+            <img src="./img/game-card-imgs/yotei.png" alt="" />
             <div class="plataforma">
               <img src="./img/playstation.svg" alt="" />
             </div>
@@ -282,9 +284,9 @@
 
         <article class="game-card">
           <a href="#" class="card-holder">
-            <img src="./img/sunset.png" alt="" />
+            <img src="./img/game-card-imgs/sunset.png" alt="" />
             <div class="plataforma">
-              <img src="./img/steam.svg" alt="" />
+              <img src="./img/steam.svg" alt="plataforma steam" />
             </div>
 
             <div class="card-info">
@@ -324,22 +326,22 @@
                 </div>
 
                 <div class="slide-images-galery">
-                    <div class="image-galery active">
+                    <div class="image-galery active" data-galery-image="1">
                       <img src="img/miniaturas/stardew-valley/stardew1.jpg" alt="">
                     </div>
-                    <div class="image-galery">
+                    <div class="image-galery" data-galery-image="2">
                       <img src="img/miniaturas/stardew-valley/stardew2.jpg" alt="">
                     </div>
-                    <div class="image-galery">
+                    <div class="image-galery" data-galery-image="3">
                       <img src="img/miniaturas/stardew-valley/stardew3.jpg" alt="">
                     </div>
-                    <div class="image-galery">
+                    <div class="image-galery" data-galery-image="4">
                       <img src="img/miniaturas/stardew-valley/stardew4.jpg" alt="">
                     </div>
-                    <div class="image-galery">
+                    <div class="image-galery" data-galery-image="5">
                       <img src="img/miniaturas/stardew-valley/stardew5.jpg" alt="">
                     </div>
-                    <div class="image-galery">
+                    <div class="image-galery" data-galery-image="6">
                       <img src="img/miniaturas/stardew-valley/stardew6.jpg" alt="">
                     </div>
                 </div>
@@ -351,8 +353,10 @@
                 </div>
                 
                 <div class="card-info">
-                  <h3>Stardew Valey</h3>
-                  <p>Você herdou a antiga propriedade agrícola do seu avô em Stardew Valley. De seu sangue e suor e faça ela voltar a vida.</p>
+                  <div class="card-descricao">
+                    <h3>Stardew Valey</h3>
+                    <p>Você herdou a antiga propriedade agrícola do seu avô em Stardew Valley. De seu sangue e suor e faça ela voltar a vida.</p>
+                  </div>
 
                   <ul>
                     <li>
@@ -368,25 +372,227 @@
                       <p>Entre 55h a 100h de conteudo </p>
                     </li>
                   </ul>
+
                   <div class="preco">
+                    <p>Promoção acaba em:</p>
+                    <p><span class="dias">10</span> dias <span class="horas">24</span> horas em <span class="minutos">15</span> minutos</p>
                     <h4>R$ 299,99 BRL</h4>
                   </div>
                 </div>
               </div>
-            </li>
-            
-            
+            </li>             
           </ul>
           
           <button class="carousel-button prev" data-carousel-button="prev">&#8656</button>
           <button class="carousel-button next" data-carousel-button="next">&#8658</button>
         </div>
       </section>
+
+      <section class="card-section mais-vendidos">
+        <div class="card-section-titulo">
+          <div class="card-section-desc">
+            <h2>Os mais vendidos do momento</h2>
+          </div>
+        </div>
+
+        <article class="game-card" data-top-position>
+          <a href="#" class="card-holder">
+            <div class="plataforma">
+              <img src="./img/steam.svg" alt="plataforma steam" />
+              <img src="./img/game-card-imgs/sunset.png" alt="" />
+            </div>
+
+            <div class="card-info">
+              <h3>Sunset Overdrive</h3>
+
+              <div class="preco">
+                <h4>R$ 99,00 BRL</h4>
+                <button>
+                  <img src="./img/icons/carrinho-preto.svg" alt="carrinho de compras" />
+                  <span>COMPRAR</span>
+              </button>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="game-card" data-top-position>
+          <a href="#" class="card-holder">
+            <div class="plataforma">
+              <img src="./img/playstation.svg" alt="" />
+              <img src="./img/game-card-imgs/wolverine.png" alt="" />
+            </div>
+
+            <div class="card-info">
+              <h3>Marvel's Wolverine</h3>
+
+              <div class="preco">
+                <h4>R$ 299,99 BRL</h4>
+                <button>
+                  <img src="./img/icons/carrinho-preto.svg" alt="carrinho de compras" />
+                  <span>COMPRAR</span>
+              </button>
+              </div>
+            </div>
+          </a>
+
+        </article>
+        
+        <article class="game-card" data-top-position="">
+          <a href="#" class="card-holder">
+            <div class="plataforma">
+              <img src="./img/steam.svg" alt="plataforma steam" />
+              <img src="./img/game-card-imgs/red1.png" alt="" />
+            </div>
+
+            <div class="card-info">
+              <h3>Red Dead Redemption 2</h3>
+
+              <div class="preco">
+                <div class="promo">
+                  <span>-74%</span>
+                  <h4>R$ 77,98</h4>
+                </div>
+                <button>
+                  <img src="./img/icons/carrinho-preto.svg" alt="carrinho de compras" />
+                  <span>COMPRAR</span>
+              </button>
+              </div>
+            </div>
+          </a>
+
+        </article>
+        <article class="game-card" data-top-position="">
+          <a href="#" class="card-holder">
+            <div class="plataforma">
+              <img src="./img/steam.svg" alt="plataforma steam" />
+              <img src="./img/game-card-imgs/sunset.png" alt="" />
+            </div>
+
+            <div class="card-info">
+              <h3>Sunset Overdrive</h3>
+
+              <div class="preco">
+                <div class="promo">
+                  <span>-40%</span>
+                  <h4>R$ 179,40</h4>
+                </div>
+                <button>
+                  <img src="./img/icons/carrinho-preto.svg" alt="carrinho de compras" />
+                  <span>COMPRAR</span>
+              </button>
+              </div>
+            </div>
+          </a>
+
+        </article>
+        <article class="game-card" data-top-position="">
+          <a href="#" class="card-holder">
+            <div class="plataforma">
+              <img src="./img/steam.svg" alt="plataforma steam" />
+              <img src="./img/game-card-imgs/sunset.png" alt="" />
+            </div>
+
+            <div class="card-info">
+              <h3>Sunset Overdrive</h3>
+
+              <div class="preco">
+                <div class="promo">
+                  <span>-40%</span>
+                  <h4>R$ 179,40</h4>
+                </div>
+                <button>
+                  <img src="./img/icons/carrinho-preto.svg" alt="carrinho de compras" />
+                  <span>COMPRAR</span>
+              </button>
+              </div>
+            </div>
+          </a>
+
+        </article>
+        <article class="game-card" data-top-position="">
+          <a href="#" class="card-holder">
+            <div class="plataforma">
+              <img src="./img/steam.svg" alt="plataforma steam" />
+              <img src="./img/game-card-imgs/sunset.png" alt="" />
+            </div>
+
+            <div class="card-info">
+              <h3>Sunset Overdrive</h3>
+
+              <div class="preco">
+                <div class="promo">
+                  <span>-40%</span>
+                  <h4>R$ 179,40</h4>
+                </div>
+                <button>
+                  <img src="./img/icons/carrinho-preto.svg" alt="carrinho de compras" />
+                  <span>COMPRAR</span>
+              </button>
+              </div>
+            </div>
+          </a>
+
+        </article>
+        <article class="game-card" data-top-position="">
+          <a href="#" class="card-holder">
+            <div class="plataforma">
+              <img src="./img/steam.svg" alt="plataforma steam" />
+              <img src="./img/game-card-imgs/sunset.png" alt="" />
+            </div>
+
+            <div class="card-info">
+              <h3>Sunset Overdrive</h3>
+
+              <div class="preco">
+                <div class="promo">
+                  <span>-40%</span>
+                  <h4>R$ 179,40</h4>
+                </div>
+                <button>
+                  <img src="./img/icons/carrinho-preto.svg" alt="carrinho de compras" />
+                  <span>COMPRAR</span>
+              </button>
+              </div>
+            </div>
+          </a>
+
+        </article>
+        <article class="game-card" data-top-position="">
+          <a href="#" class="card-holder">
+            <div class="plataforma">
+              <img src="./img/steam.svg" alt="plataforma steam" />
+              <img src="./img/game-card-imgs/sunset.png" alt="" />
+            </div>
+
+            <div class="card-info">
+              <h3>Sunset Overdrive</h3>
+
+              <div class="preco">
+                <div class="promo">
+                  <span>-40%</span>
+                  <h4>R$ 179,40</h4>
+                </div>
+                <button>
+                  <img src="./img/icons/carrinho-preto.svg" alt="carrinho de compras" />
+                  <span>COMPRAR</span>
+              </button>
+              </div>
+            </div>
+          </a>
+
+        </article>
+      </section>
+
     </main>
+
+    <footer>
+      <p>Todos os direitos e mais alguns reservados</p>
+    </footer>
   </body>
 
 
 
-  <script src="main.js"></script>
-  <script src="./carousel.js"></script>
+  <script src="./javascript/main.js"></script>
+  <script src="./javascript/carousel.js"></script>
 </html>

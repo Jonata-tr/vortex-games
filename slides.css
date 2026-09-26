@@ -22,7 +22,6 @@
     object-fit: cover;
 
     border-radius: 8px 0 0 8px;
-    padding: 16px;
 
     display: grid;
     grid-template-columns: 1fr;
@@ -30,16 +29,23 @@
     justify-items: center;
 }
 .slide-images.steam{
-    background-color: #1B2E46;
+    background: linear-gradient(to right, #1B2E46 0%, #385E7D 52%, #1B2E46 100%);
 }
 
-
 .slide-images-banner{
-    width: 100%;
+    width: 600px;
     height: 100%;
-
-    background-image: url("./img/miniaturas/stardew-valley/banner/stardew-slide-1.jpg");
+    
+    background-image: url("./img/galeria-princial/stardew1-slide.jpg");
     background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.slide-images-banner[data-slide="2"]{
+    background-image: url("./img/wolverine.png");
+}
+.slide-images-banner[data-slide="3"]{
+    background-image: url("./img/GEARS.png");
 }
 
 .slide-images-banner > img{
@@ -48,16 +54,15 @@
 }
 
 .slide-images-galery{
-    padding: 16px 0 24px;
+    padding: 16px;
 
     display: flex;
     justify-content: space-evenly;
     gap: 8px;
 
 }
-.image-galery.active {
-    outline: 4px;
-    border: 2px solid red;
+.image-galery.active img{
+    outline: 4px solid var(--primary-color);
 }   
 
 .slide-images-galery img{
@@ -75,6 +80,14 @@
 
 }
 
+.slide-info h3{
+    color: var(--primary-text);
+    margin-bottom: 4px;
+}
+.slide-info h3 ~ p{
+    color: #fff;
+}
+
 .slide-info .slide-game-plataform > img{
     width: 100%;
 }
@@ -85,10 +98,39 @@
 
 .slide-info > .card-info{
     padding: 24px;
+    height: 400px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .slide-info > .card-info ul li{
     display: flex;
     gap: 8px;
+    align-items: center;
+
+    color: #e7e7e7;
+}
+.card-info li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.slide-info .preco p:first-of-type{
+    margin-bottom: 4px;
+    color: var(--primary-text);
+}
+.slide-info .preco p{
+    margin-bottom: 24px;
+    color: #fff;
+}
+.slide-info .preco span{
+    color: var(--realce);
+    font-weight: bold;
+}
+.slide-info .preco h4{
+    color: var(--promo-card-prices);
+    font-weight: bold;
+    font-size: 24px;
 }
 
 .carousel-button{
