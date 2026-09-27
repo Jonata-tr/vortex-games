@@ -1,5 +1,7 @@
-.card-section{
+.card-section.slide-section{
     grid-column: 1 / -1;
+
+    margin-bottom: 120px;
 }
 
 .carousel{
@@ -13,9 +15,11 @@
     inset: 0;
     opacity: 0;
 
+    display: none;
+}
+.slide[data-active]{
     display: flex;
 }
-
 .slide-images{
     height: 100%;
     padding-top: 10px;
@@ -31,20 +35,25 @@
 .slide-images.steam{
     background: linear-gradient(to right, #1B2E46 0%, #385E7D 52%, #1B2E46 100%);
 }
+.slide-images.playstation{
+    background: #6D81B5;
+}
 
 .slide-images-banner{
     width: 600px;
     height: 100%;
     
-    background-image: url("./img/galeria-princial/stardew1-slide.jpg");
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
 }
-.slide-images-banner[data-slide="2"]{
-    background-image: url("./img/wolverine.png");
+.slide-images-banner[data-banner="1"]{
+    background-image: url("./img/galeria-princial/stardew1-slide.jpg");
 }
-.slide-images-banner[data-slide="3"]{
+.slide-images-banner[data-banner="2"]{
+    background-image: url("./img/galeria-princial/persona1-slide.jpg");
+}
+.slide-images-banner[data-banner="3"]{
     background-image: url("./img/GEARS.png");
 }
 
@@ -60,7 +69,9 @@
     justify-content: space-evenly;
     gap: 8px;
 
+    cursor: pointer;
 }
+
 .image-galery.active img{
     outline: 4px solid var(--primary-color);
 }   
@@ -78,6 +89,9 @@
 
     border: 4px solid #1B2E46;
 
+}
+.slide-images.playstation ~ .slide-info{
+    border: 4px solid #6D81B5;
 }
 
 .slide-info h3{
@@ -130,17 +144,23 @@
 .slide-info .preco h4{
     color: var(--promo-card-prices);
     font-weight: bold;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .carousel-button{
     position: absolute;
     z-index: 2;
-    background: none;
+
+    padding: 10px 20px;
     border: none;
-    font-size: 4rem;
-    top: 100%;
+
+    font-size: 1.5rem;
+    top: 102%;
+
+    cursor: pointer;
 }
+
+
 
 .carousel-button.next{
     right: 1rem;
