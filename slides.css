@@ -1,7 +1,7 @@
 .card-section.slide-section{
     grid-column: 1 / -1;
 
-    margin-bottom: 120px;
+    margin-bottom: 132px;
 }
 
 .carousel{
@@ -156,11 +156,27 @@
 
     font-size: 1.5rem;
     top: 102%;
-
+    
     cursor: pointer;
 }
 
+.carousel .slide-main-button{
+    position: absolute;
+    
+    z-index: 2;
+    
+    padding: 10px 80px;
+    border: none;
+    
+    font-size: 1.5rem;
+    top: 102%;
+    transform: translatex(-50%);
+    left: 50%;
 
+    background-color: var(--button-background);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-border);
+}
 
 .carousel-button.next{
     right: 1rem;

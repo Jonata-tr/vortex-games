@@ -71,8 +71,35 @@ topContagem.forEach((card, i) =>{
 
 // Fundo do menu ao scrollar
 const header = document.querySelector("header")
+let ultimaPosicao = 0;
+let scrollSubindo = 0;
+const headerMinimoSumir = 150;
 
 window.addEventListener("scroll", () => {
+    let posicaoAtual = (position =
+      window.pageYOffset || document.documentElement.scrollTop);
+
+    if (posicaoAtual < 0) return;
+
+    // Se a rolagem atual for maior que a última, o usuário está descendo
+    if (posicaoAtual < ultimaPosicao && posicaoAtual > 600) {
+         totalSubido += ultimaPosicao - posicaoAtual;
+
+        if(totalSubido > headerMinimoSumir){
+            header.classList.add("hidde-header");
+        }
+        
+    } else {
+        // Se for menor, o usuário está subindo
+        totalSubido = 0
+        header.classList.remove("hidde-header");
+    }
+    
+    
     if(window.scrollY > 10) header.classList.add("moving")
-    else header.classList.remove("moving")
+        else header.classList.remove("moving")
+    
+    console.log("total = " + totalSubido);
+    return ultimaPosicao = posicaoAtual
 })
+
